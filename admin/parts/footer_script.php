@@ -13,4 +13,5 @@
 
 <!-- form validation -->
 <script src="<?php echo base_url;?>assets/admin/js/validator.js"></script>
+<script>window.APP_BASE_URL = <?php echo json_encode(base_url, JSON_UNESCAPED_SLASHES); ?>;</script>
 <script src="<?php echo base_url;?>assets/admin/js/main.js"></script>

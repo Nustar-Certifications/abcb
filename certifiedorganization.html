@@ -218,7 +218,7 @@
         $('#searchCertification').submit(function (event) {
             event.preventDefault();
             $.ajax({
-                url: window.location.origin + '/process/search.php',
+                url: 'process/search.php',
                 type: 'POST',
                 dataType: 'json',
                 data: $('#searchCertification').serializeArray(),

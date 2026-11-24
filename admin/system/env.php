@@ -57,3 +57,60 @@ function env(string $key, $default = null)
     }
     return $default;
 }
+
+/**
+ * Build site base URL from the current request (for live hosting when .env still says localhost).
+ */
+function detectAppBaseUrl(): string
+{
+    $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
+        || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+    $scheme = $https ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+
+    $docRoot = isset($_SERVER['DOCUMENT_ROOT']) ? realpath($_SERVER['DOCUMENT_ROOT']) : false;
+    $projectRoot = realpath(dirname(__DIR__, 2));
+
+    if ($docRoot && $projectRoot && strncmp($projectRoot, $docRoot, strlen($docRoot)) === 0) {
+        $relative = substr($projectRoot, strlen($docRoot));
+        $relative = str_replace('\\', '/', $relative);
+        $relative = '/' . trim($relative, '/');
+        if ($relative === '/') {
+            return $scheme . '://' . $host . '/';
+        }
+        return $scheme . '://' . $host . $relative . '/';
+    }
+
+    $script = $_SERVER['SCRIPT_NAME'] ?? '/';
+    $dir = str_replace('\\', '/', dirname($script));
+    while ($dir !== '/' && $dir !== '' && $dir !== '.') {
+        $base = dirname($dir);
+        if (in_array(basename($dir), ['admin', 'process'], true)) {
+            $path = $base === '/' || $base === '.' ? '/' : $base . '/';
+            return $scheme . '://' . $host . ($path === '/' ? '/' : rtrim($path, '/') . '/');
+        }
+        $dir = $base;
+    }
+
+    return $scheme . '://' . $host . '/';
+}
+
+function resolveAppBaseUrl(): string
+{
+    $configured = trim((string) env('APP_URL', ''));
+    $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+    $requestIsLocal = $host === ''
+        || strpos($host, 'localhost') !== false
+        || strpos($host, '127.0.0.1') !== false;
+    $configuredIsLocal = $configured === ''
+        || stripos($configured, 'localhost') !== false
+        || stripos($configured, '127.0.0.1') !== false
+        || stripos($configured, 'yourdomain.com') !== false;
+
+    if ($configured !== '' && !($configuredIsLocal && !$requestIsLocal)) {
+        return rtrim($configured, '/') . '/';
+    }
+
+    return detectAppBaseUrl();
+}

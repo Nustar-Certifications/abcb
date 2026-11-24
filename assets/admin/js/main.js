@@ -54,13 +54,13 @@ $(document).ready(function () {
             certificationNumber: {
                 required: true,
                 remote: {
-                    url: window.location.origin + "/process/check_dublicate.php",
+                    url: (window.APP_BASE_URL || '/') + 'process/check_dublicate.php',
                 }
             },
             companyName: {
                 required: true,
                 remote: {
-                    url: window.location.origin + "/process/check_dublicate.php",
+                    url: (window.APP_BASE_URL || '/') + 'process/check_dublicate.php',
                 }
             }
 
@@ -126,7 +126,7 @@ $(document).ready(function () {
 //edit box
 function editBox(id) {
     $.ajax({
-        url: window.location.origin + '/process/certified-client-edit.php',
+        url: (window.APP_BASE_URL || '/') + 'process/certified-client-edit.php',
         type: 'POST',
         dataType: 'json',
         data: {'id': id,'method':'singleDetail'},
