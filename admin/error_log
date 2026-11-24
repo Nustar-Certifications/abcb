@@ -1,0 +1,250 @@
+[29-Sep-2023 11:23:11 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:17 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:17 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:17 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:18 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:26 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:28 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:29 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:29 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:29 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:29 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:29 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:29 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:48 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:48 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:49 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:49 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:49 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:49 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:49 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:23:49 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:07 Asia/Kolkata] PHP Fatal error:  Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:14 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:15 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:15 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:16 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:16 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:16 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:16 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:16 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:17 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:19 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:19 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:19 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:19 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:19 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:25 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:25 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:25 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:25 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:25 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:25 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:26 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:26 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:26 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:34 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:35 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:35 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
+[29-Sep-2023 11:24:35 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/abcb/public_html/admin/system/db.php:6
+Stack trace:
+#0 /home/abcb/public_html/admin/system/main.php(24): require_once()
+#1 /home/abcb/public_html/admin/index.php(8): require_once('/home/abcb/publ...')
+#2 {main}
+  thrown in /home/abcb/public_html/admin/system/db.php on line 6
