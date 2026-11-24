@@ -20,7 +20,9 @@ function createToken($length = 12) {
 }
 
 //include files
-define("base_url", 'http://localhost/abcb/');
+require_once __DIR__ . '/env.php';
+loadEnvFile();
+define('base_url', rtrim((string) env('APP_URL', 'http://localhost/abcb/'), '/') . '/');
 require_once 'db.php';
 $current_url = @$_SERVER['PHP_SELF'];
 $current_page = basename($current_url);

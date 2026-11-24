@@ -1,14 +1,17 @@
 <?php
-$hostname='localhost';
-$username='root';
-$dbname='ab-cb';
-$password='';
-$con = mysqli_connect($hostname, $username , $password, $dbname);
+
+require_once __DIR__ . '/env.php';
+loadEnvFile();
+
+$hostname = env('DB_HOST', 'localhost');
+$username = env('DB_USER', 'root');
+$dbname = env('DB_NAME', 'ab-cb');
+$password = env('DB_PASSWORD', '');
+$port = (int) env('DB_PORT', 3306);
+
+$con = mysqli_connect($hostname, $username, $password, $dbname, $port);
 // Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  exit();
-  }
-  //$mysqli=new $con;
-?>
+if (mysqli_connect_errno()) {
+    echo 'Failed to connect to MySQL: ' . mysqli_connect_error();
+    exit();
+}
