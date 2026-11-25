@@ -2,23 +2,27 @@
 
 function loadEnvFile(?string $path = null): void
 {
-    static $loaded = false;
-    if ($loaded) {
+    static $loadedPaths = [];
+
+    if ($path === null) {
+        $root = dirname(__DIR__, 2);
+        loadEnvFile($root . DIRECTORY_SEPARATOR . '.env');
+        loadEnvFile($root . DIRECTORY_SEPARATOR . '.env.local');
         return;
     }
 
-    if ($path === null) {
-        $path = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . '.env';
+    if (isset($loadedPaths[$path])) {
+        return;
     }
 
     if (!is_readable($path)) {
-        $loaded = true;
+        $loadedPaths[$path] = true;
         return;
     }
 
     $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     if ($lines === false) {
-        $loaded = true;
+        $loadedPaths[$path] = true;
         return;
     }
 
@@ -43,7 +47,7 @@ function loadEnvFile(?string $path = null): void
         putenv("$name=$value");
     }
 
-    $loaded = true;
+    $loadedPaths[$path] = true;
 }
 
 function env(string $key, $default = null)
