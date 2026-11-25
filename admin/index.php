@@ -1,10 +1,11 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 require_once './system/main.php';
-header('Location:' . base_url . 'admin/dashboard.php');
+require_once './system/auth.php';
+
+if (adminHasValidSession($con)) {
+    header('Location:' . base_url . 'admin/dashboard.php');
+} else {
+    header('Location:' . base_url . 'admin/login.php');
+}
 exit();

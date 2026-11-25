@@ -12,15 +12,28 @@ if(isset($_POST['username']) && !empty($_POST['username']) && !empty($_POST['pas
     $r=mysqli_query($con,$q);
     $isUserExist=mysqli_num_rows($r);
     if($isUserExist==1){
-        //update user logged in time
         $cookiesToken = $_COOKIE['adminLogin'] ?? '';
+        if ($cookiesToken === '') {
+            $cookiesToken = createToken(24);
+            $https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+                || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
+                || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+            setcookie('adminLogin', $cookiesToken, [
+                'expires' => time() + 86400 * 30,
+                'path' => '/',
+                'secure' => $https,
+                'httponly' => true,
+                'samesite' => 'Lax',
+            ]);
+            $_COOKIE['adminLogin'] = $cookiesToken;
+        }
+        session_regenerate_id(true);
         $currentTime=date('Y/m/d h:i:s', time());
         $updateQ="UPDATE r_control set lastLogin='$currentTime' , cookiesToken='$cookiesToken' where username='$username' && password='$password' limit 1";
         mysqli_query($con,$updateQ);
-        // set session and redirection 
         $_SESSION['username']=$username;
         $_SESSION['password']=$password;
-        $json=array('status'=>true,'message'=>'logged in' ,'dialogMsg'=>'Welcome admin please wait for dashboard','redirect'=>base_url.'admin');
+        $json=array('status'=>true,'message'=>'logged in' ,'dialogMsg'=>'Welcome admin please wait for dashboard','redirect'=>base_url.'admin/dashboard.php');
     }else{
         $json=array('status'=>false,'message'=>'Invalid username or password');
     }

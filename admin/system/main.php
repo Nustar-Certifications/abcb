@@ -5,6 +5,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+$https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
+    || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+
+session_set_cookie_params([
+    'lifetime' => 0,
+    'path' => '/',
+    'secure' => $https,
+    'httponly' => true,
+    'samesite' => 'Lax',
+]);
 session_start();
 date_default_timezone_set("Asia/Kolkata");
 
@@ -28,12 +39,19 @@ if (!defined('base_url')) {
 require_once 'db.php';
 $current_url = @$_SERVER['PHP_SELF'];
 $current_page = basename($current_url);
+$adminPublicPages = ['login.php', 'index.php', 'logout.php'];
 if ($current_page === 'login.php' && empty($_COOKIE['adminLogin'])) {
     $loginCookie = createToken(24);
-    setcookie('adminLogin', $loginCookie, time() + 86400 * 30, '/');
+    setcookie('adminLogin', $loginCookie, [
+        'expires' => time() + 86400 * 30,
+        'path' => '/',
+        'secure' => $https,
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
     $_COOKIE['adminLogin'] = $loginCookie;
 }
-if ($current_page != 'login.php') {
+if (!in_array($current_page, $adminPublicPages, true)) {
     require_once 'session_check.php';
 }
 
