@@ -28,6 +28,11 @@ if (!defined('base_url')) {
 require_once 'db.php';
 $current_url = @$_SERVER['PHP_SELF'];
 $current_page = basename($current_url);
+if ($current_page === 'login.php' && empty($_COOKIE['adminLogin'])) {
+    $loginCookie = createToken(24);
+    setcookie('adminLogin', $loginCookie, time() + 86400 * 30, '/');
+    $_COOKIE['adminLogin'] = $loginCookie;
+}
 if ($current_page != 'login.php') {
     require_once 'session_check.php';
 }

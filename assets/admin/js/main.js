@@ -43,7 +43,8 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: $(form).serialize(),
                 beforeSend: showRequest,
-                success: showResponse
+                success: showResponse,
+                error: showAjaxError
             });
         }
     });
@@ -83,7 +84,8 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: $(form).serialize(),
                 beforeSend: showRequest,
-                success: showResponse
+                success: showResponse,
+                error: showAjaxError
             });
         }
     });
@@ -93,13 +95,23 @@ $(document).ready(function () {
         $("button").prop('disabled', true);
         openWaitDialog('Please Wait');
     }
+    function showAjaxError(xhr) {
+        closeDialog();
+        var msg = 'Server respond with an error. Please check database / server logs.';
+        if (xhr.responseText && xhr.responseText.indexOf('Failed to connect to MySQL') !== -1) {
+            msg = 'Database connection failed. Start MySQL in XAMPP and confirm .env settings.';
+        }
+        $(".msg").html('<div class="alert alert-danger fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>OOPS! </strong> ' + msg + '</div>');
+        $("button").prop('disabled', false);
+    }
+
     function showResponse(response, statusText, xhr, $form) {
         closeDialog();
         if (xhr.status == 200) {
             if (response.status) {
                 $("button").remove();
                 if (typeof (response.redirect) != 'undefined') {
-                    if (response.dialogMsg != 'undefined') {
+                    if (response.dialogMsg) {
                         openWaitDialog(response.message);
                     }
 

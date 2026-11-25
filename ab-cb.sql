@@ -74,7 +74,7 @@ CREATE TABLE `r_control` (
 --
 
 INSERT INTO `r_control` (`id`, `username`, `password`, `cookiesToken`, `lastLogin`) VALUES
-(1, 'admin@gmail.com', '0bafdc5f08c2bf2ec44fe058b2312ef5d688a3a5', '', '2020-03-04 01:24:03');
+(1, 'admin@gmail.com', '479dc4a0de3d6275be7cfed05900c39e97625687', '', '2020-03-04 01:24:03');
 
 --
 -- Indexes for dumped tables

@@ -2,7 +2,7 @@
 
 require_once '../admin/system/main.php';
 
- 
+header('Content-Type: application/json; charset=utf-8');
 
 //check for post variable
 if(isset($_POST['username']) && !empty($_POST['username']) && !empty($_POST['password']) && isset($_POST['password'])){
@@ -13,7 +13,7 @@ if(isset($_POST['username']) && !empty($_POST['username']) && !empty($_POST['pas
     $isUserExist=mysqli_num_rows($r);
     if($isUserExist==1){
         //update user logged in time
-        $cookiesToken=  $_COOKIE['adminLogin'];
+        $cookiesToken = $_COOKIE['adminLogin'] ?? '';
         $currentTime=date('Y/m/d h:i:s', time());
         $updateQ="UPDATE r_control set lastLogin='$currentTime' , cookiesToken='$cookiesToken' where username='$username' && password='$password' limit 1";
         mysqli_query($con,$updateQ);

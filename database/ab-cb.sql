@@ -62,4 +62,4 @@ CREATE TABLE `r_control` (
 -- Dumping data for table `r_control`
 --
 
-INSERT INTO `r_control` VALUES(1, 'admin@gmail.com', '0bafdc5f08c2bf2ec44fe058b2312ef5d688a3a5', '', '2018-08-25 01:44:11');
+INSERT INTO `r_control` VALUES(1, 'admin@gmail.com', '479dc4a0de3d6275be7cfed05900c39e97625687', '', '2018-08-25 01:44:03');

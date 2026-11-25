@@ -98,8 +98,19 @@ function createDialog(option) {
 // Close DialogBox  Start
  function closeDialog(){
 	var dialogId = '#'+dialogConfig.id;
-	$(dialogId).on('hide.bs.modal',function(){$(dialogId).remove();$('body').removeClass('modal-open');});
-	$(dialogId).modal('hide');
+	var $dialog = $(dialogId);
+	if ($dialog.length === 0) {
+		$('.modal-backdrop').remove();
+		$('body').removeClass('modal-open');
+		return;
+	}
+	$dialog.off('hide.bs.modal');
+	$dialog.one('hidden.bs.modal', function () {
+		$dialog.remove();
+		$('.modal-backdrop').remove();
+		$('body').removeClass('modal-open');
+	});
+	$dialog.modal('hide');
 }
 // End Close DialogBox End
 
