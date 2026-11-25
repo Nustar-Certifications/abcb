@@ -12,13 +12,13 @@ if (adminHasValidSession($con)) {
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Control login</title>
+        <title>AB-CB | Admin sign in</title>
         <?php include './parts/head.php'; ?>
     </head>
-    <body class="hold-transition login-page">
+    <body class="hold-transition login-page admin-modern">
         <div class="login-box">
             <div class="login-logo">
-                <a href=""><b>AB</b>CB</a>
+                <a href="<?php echo base_url; ?>"><b>AB</b>-CB</a>
             </div>
             <!-- /.login-logo -->
             <div class="login-box-body">
@@ -36,12 +36,9 @@ if (adminHasValidSession($con)) {
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="row">
-
-                        <!-- /.col -->
-                        <div class="col-xs-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                        <div class="col-xs-12">
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign in</button>
                         </div>
-                        <!-- /.col -->
                     </div>
                 </form>
 

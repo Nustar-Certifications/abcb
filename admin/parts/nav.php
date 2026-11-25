@@ -1,85 +1,88 @@
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+$certPages = ['certified-client-add.php', 'certified-client-view.php'];
+$certMenuOpen = in_array($currentPage, $certPages, true);
+$dashboardActive = $currentPage === 'dashboard.php';
+?>
   <header class="main-header">
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>AB</b>CB</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin </b>AB-CB</span>
+    <a href="<?php echo base_url; ?>admin/dashboard.php" class="logo">
+      <span class="logo-mini"><b>AB</b></span>
+      <span class="logo-lg"><b>Admin</b> AB-CB</span>
     </a>
-    <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url;?>assets/img/admin/logo.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Admin Control</span>
+              <span class="admin-avatar" aria-hidden="true">AB</span>
+              <span class="hidden-xs">Admin</span>
             </a>
             <ul class="dropdown-menu">
-              <!-- User image -->
               <li class="user-header">
-                <img src="<?php echo base_url;?>assets/img/admin/logo.jpg" class="img-circle">
-
+                <div class="admin-avatar admin-avatar-lg">AB</div>
                 <p>
-                  Admin Control
-                  <small>Every change will effect on website</small>
+                  Administrator
+                  <small>Manage certifications &amp; client records</small>
                 </p>
               </li>
-              <!-- Menu Body -->
-              <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="<?php echo  base_url; ?>process/logout.php" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url; ?>process/logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
           </li>
-          
         </ul>
       </div>
     </nav>
   </header>
-  <!-- Left side column. contains the logo and sidebar -->
+
   <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="<?php echo base_url;?>assets/img/admin/logo.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Admin Profile</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
+      <div class="sidebar-user">
+        <div class="admin-avatar admin-avatar-lg">AB</div>
+        <p class="name">Admin Profile</p>
+        <span class="status"><i class="fa fa-circle"></i> Online</span>
       </div>
-           <!-- sidebar menu: : style can be found in sidebar.less -->
+
       <ul class="sidebar-menu">
-        <li class="header">MAIN NAVIGATION</li>
-        <li class="treeview">
+        <li class="header">Main</li>
+        <li class="<?php echo $dashboardActive ? 'active' : ''; ?>">
+          <a href="<?php echo base_url; ?>admin/dashboard.php">
+            <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li class="treeview <?php echo $certMenuOpen ? 'active menu-open' : ''; ?>">
           <a href="#">
-            <i class="fa fa-pie-chart"></i>
+            <i class="fa fa-certificate"></i>
             <span>Certified Clients</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url;?>admin/certified-client-add.php"><i class="fa fa-user"></i> <span>Add</a></li>
-            <li><a href="<?php echo base_url;?>admin/certified-client-view.php"><i class="fa fa-user"></i> <span>View</a></li>
-            
+            <li class="<?php echo $currentPage === 'certified-client-add.php' ? 'active' : ''; ?>">
+              <a href="<?php echo base_url; ?>admin/certified-client-add.php">
+                <i class="fa fa-plus-circle"></i>
+                <span>Add certification</span>
+              </a>
+            </li>
+            <li class="<?php echo $currentPage === 'certified-client-view.php' ? 'active' : ''; ?>">
+              <a href="<?php echo base_url; ?>admin/certified-client-view.php">
+                <i class="fa fa-list"></i>
+                <span>View all</span>
+              </a>
+            </li>
           </ul>
         </li>
-        
-        
-        
-        
-        
+
+        <li class="header">Site</li>
+        <li>
+          <a href="<?php echo base_url; ?>" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-external-link"></i>
+            <span>View public website</span>
+          </a>
+        </li>
       </ul>
     </section>
-    <!-- /.sidebar -->
   </aside>

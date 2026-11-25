@@ -36,7 +36,7 @@ loadEnvFile();
 if (!defined('base_url')) {
     define('base_url', resolveAppBaseUrl());
 }
-require_once 'db.php';
+require_once __DIR__ . '/db.php';
 $current_url = @$_SERVER['PHP_SELF'];
 $current_page = basename($current_url);
 $adminPublicPages = ['login.php', 'index.php', 'logout.php'];
@@ -52,7 +52,7 @@ if ($current_page === 'login.php' && empty($_COOKIE['adminLogin'])) {
     $_COOKIE['adminLogin'] = $loginCookie;
 }
 if (!in_array($current_page, $adminPublicPages, true)) {
-    require_once 'session_check.php';
+    require_once __DIR__ . '/session_check.php';
 }
 
 

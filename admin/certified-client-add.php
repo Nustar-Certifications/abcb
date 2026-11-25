@@ -8,7 +8,7 @@ require_once './system/main.php';
 
         <?php require_once './parts/head.php'; ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-blue admin-modern">
         <div class="wrapper">
 
             <?php require_once './parts/nav.php'; ?>

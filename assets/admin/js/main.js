@@ -8,6 +8,10 @@
 //login validation
 
 $(document).ready(function () {
+    if ($('body.admin-modern').length && !$('body').hasClass('login-page')) {
+        $('body').removeClass('sidebar-collapse sidebar-open');
+    }
+
     $('#login').validate({
         rules: {
             username: {

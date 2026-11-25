@@ -1,7 +1,6 @@
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.3
+      AB-CB Admin Panel
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://internetpanache.in/">Internet Panache</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; <?php echo date('Y'); ?> <a href="<?php echo base_url; ?>">AB-CB</a>.</strong> All rights reserved.
   </footer>

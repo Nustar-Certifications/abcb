@@ -1,0 +1,8 @@
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /abcb/
+
+    RewriteRule ^([^/]+)\.html$ $1.php [L,R=301,QSA,NC]
+</IfModule>

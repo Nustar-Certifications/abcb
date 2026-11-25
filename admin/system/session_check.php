@@ -1,6 +1,6 @@
 <?php
 
-require_once 'main.php';
-require_once 'auth.php';
+require_once __DIR__ . '/main.php';
+require_once __DIR__ . '/auth.php';
 
 adminRequireLogin($con);
